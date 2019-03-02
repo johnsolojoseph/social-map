@@ -139,7 +139,7 @@ function initMap() {
   });
 
   // Add Marker Function
-  function addMarker(props) {
+  async function addMarker(props) {
     var marker = new google.maps.Marker({
       position: props.val().coordinates,
       map: map,
@@ -168,11 +168,12 @@ function initMap() {
     //Path for the database ID
     var dbPath = "\"/" + props.key + "\"";
 
+
     //Info Window Content
 
     //Set default content for infoWindow
     var newContent = "<p>There seems to be a problem...<p>";
-    console.log(props.val().sentiment);
+  
     //Checks to see if the user inputted anything for the infoWindow
     if (props.val().title && props.val().description) {
       newContent = "<div class='center'><h4>" + props.val().title + "</h4></div> <h6>Description:</h6> <p>" + props.val().description + "</p>";

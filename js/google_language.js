@@ -1,8 +1,8 @@
-function analyze(sentence) {
+async function analyze(sentence) {
   gapi.client.init({
     'apiKey': 'AIzaSyDWOwWUPAZ4RzyyZ6v_stHKFU0Lf8hLN7Y',
     'discoveryDocs': ['https://language.googleapis.com/$discovery/rest?version=v1beta1']
-  }).then(function() {
+  }).then( function() {
     return gapi.client.language.documents.analyzeSentiment({
       'document': {
                 'type': 'PLAIN_TEXT',
