@@ -19,7 +19,7 @@ window.snapKitInit = function () {
        // Argument 3
        var loginParamsObj = {
          clientId: 'e49c5fc4-7ded-46ba-ba9c-6f3d9a3719a3',
-         redirectURI: 'http://localhost:8000/',
+         redirectURI: 'https://johnsolojoseph.github.io/social-map/',
          scopeList: [ // the list of scopes you are approved for
           'user.bitmoji.avatar',
           'user.display_name',
