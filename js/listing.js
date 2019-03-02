@@ -11,7 +11,9 @@ firebase.ref().on("child_added", function(snapshot) {
 
 
 function createCards(title, description) {
-  var card =""
+  var card = "<div class='card-panel teal'><span class='white-text'>"+ title + "<br>" + description + " </span>  </div>"
+
+
   //Append to listing
 
 
