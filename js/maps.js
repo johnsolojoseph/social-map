@@ -1,6 +1,9 @@
 //Initialize all Materialize JavaScript
 M.AutoInit();
 
+//Await Function
+var wait = ms => new Promise((r, j)=>setTimeout(r, ms))
+
 // Initialize Firebase, config from db_config
 firebase.initializeApp(config);
 var firebase = firebase.database();
@@ -63,6 +66,15 @@ function initMap() {
     //Closes the modal once the user is done
     $('#add').modal('close');
 
+    var s = new Sentimood();
+
+    var sentiment = s.analyze(description).score;
+
+
+
+    console.log(sentiment);
+    var sentiment = (sentiment == undefined) ? 0 : sentiment ;
+
     // Add marker to Firebase db
     firebase.ref('/').push().set({
       coordinates: geoData,
@@ -70,7 +82,8 @@ function initMap() {
       description: description,
       police: "",
       solved: "",
-      icon: radioValue
+      icon: radioValue,
+      sentiment: sentiment
     });
 
     //Notifies the user that a marker was succesfully added
@@ -153,14 +166,21 @@ function initMap() {
 
     //Set default content for infoWindow
     var newContent = "<p>There seems to be a problem...<p>";
-
+    console.log(props.val().sentiment);
     //Checks to see if the user inputted anything for the infoWindow
     if (props.val().title && props.val().description) {
       newContent = "<div class='center'><h4>" + props.val().title + "</h4></div> <h6>Description:</h6> <p>" + props.val().description + "</p>";
+
     } else if (props.val().title) {
       newContent = "<div class='center'><h4>" + props.val().title + "</h4></div> <p>There seems to be a problem...<p>";
     } else if (props.val().description) {
       newContent = "<h6>Description:</h6> <p>" + props.val().description + "</p>";
+    }
+
+    if(props.val().sentiment >= 3) {
+      newContent += "<br><div class='center'><div class='chip positive'>Positive </div></div><br>";
+    } else if (props.val().sentiment <= -3) {
+      newContent += "<br><div class='center'><div class='chip negative'>Negative </div></div><br>";
     }
 
     if(props.val().solved) {

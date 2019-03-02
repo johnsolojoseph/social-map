@@ -59,3 +59,13 @@ body {
 #coordinate {
   display: none;
 }
+
+.negative {
+  background-color: purple;
+  color: white;
+}
+
+.positive {
+  background-color: green;
+  color: white;
+}
