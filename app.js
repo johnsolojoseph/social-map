@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 //Port for localhost or production
-const port = 5000 || process.env.PORT;
+const port = 8000 || process.env.PORT;
 
 //Serve user static files
 app.use(express.static(__dirname));
