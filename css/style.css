@@ -1,0 +1,61 @@
+#map {
+  height: -webkit-fill-available;
+  width: 100%;
+}
+
+.nav-color {
+  background-color: #2a2a2a;
+  color: white;
+}
+
+body {
+  font-family: 'Nunito', sans-serif !important;
+}
+
+.save, .save:hover {
+  cursor: pointer;
+  pointer-events: auto !important;
+  background-color: #282c34 !important;
+  border-radius: 5px;
+  color: white;
+  padding: 15px 30px;
+  font-size: 17px;
+}
+
+.police, .police:hover {
+  cursor: pointer;
+  pointer-events: auto !important;
+  background-color: #282c34 !important;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 10px;
+  font-size: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.delete, .delete:hover {
+  cursor: pointer;
+  pointer-events: auto !important;
+  background-color: #f7665e !important;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 10px;
+  font-size: 10px;
+  margin-left: 5px;
+}
+
+
+.solved, .solved:hover {
+  cursor: pointer;
+  pointer-events: auto !important;
+  background-color: #73d673 !important;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 10px;
+  font-size: 10px;
+}
+
+#coordinate {
+  display: none;
+}

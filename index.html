@@ -1,13 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Social Map</title>
+
+  <!--External CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+
 
 </head>
+
 <body>
-<p>Hello Jose</p>
+  <nav class="nav-color">
+    <div class="nav-wrapper container">
+      <a href="#" class="brand-logo">Social Map</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="">Overview Map</a></li>
+        <li><a href="post.html">Post Listings</a></li>
+        <li><a href="ar.html">AR</a></li>
+        <li><a href="">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="row">
+    <div class="">
+      <div id="map"></div>
+    </div>
+  </div>
+
+  <!-- Modal Structure -->
+  <div id="add" class="modal">
+    <div class="modal-content">
+      <form id="addMarker" action="#">
+        <h2 class="center">Add Marker</h2>
+        <h5>Title</h5>
+        <input placeholder="Warning!" id="title" type="text">
+
+        <h5>Description</h5>
+        <textarea placeholder="There seems to be a problem..." id="description" class="materialize-textarea"></textarea>
+
+        <div class="coordinate" id="coordinate">
+        </div>
+        <div id=coordinates></div>
+        <h5>Icons</h5>
+        <div class="row">
+          <!--Asteroid icon -->
+          <div class="col s12 m4 l2  center">
+            <p>
+              <img class="responsive-img" src="img/asteroid.png">
+              <input class="" name="icons" type="radio" id="asteroid" value="img/asteroid.png" />
+              <label for="asteroid">Asteroid</label>
+            </p>
+          </div>
+
+          <!--Robbery icon -->
+          <div class="col s12 m4 l2 center">
+            <p>
+              <img class="responsive-img" src="img/robbery.png">
+              <input class="" name="icons" type="radio" id="robbery" value="img/robbery.png" />
+              <label for="robbery">Robbery</label>
+            </p>
+          </div>
+
+          <!--Flood icon -->
+          <div class="col s12 m4 l2 center">
+            <p>
+              <img class="responsive-img" src="img/flood.png">
+              <input class="" name="icons" type="radio" id="flood" value="img/flood.png" />
+              <label for="flood">Flood</label>
+            </p>
+          </div>
+
+          <!--Fire icon -->
+          <div class="col s12 m4 l2 center">
+            <p>
+              <img class="responsive-img" src="img/forest-fire.png">
+              <input class="" name="icons" type="radio" id="fire" value="img/forest-fire.png" />
+              <label for="fire">Fire</label>
+            </p>
+          </div>
+
+          <!--Pothole icon -->
+          <div class="col s12 m4 l2 center">
+            <p>
+              <img class="responsive-img" src="img/pothole.png">
+              <input class="" name="icons" type="radio" id="pothole" value="img/pothole.png" />
+              <label for="pothole">Pothole</label>
+            </p>
+          </div>
+
+          <!--Graveyard icon -->
+          <div class="col s12 m4 l2 center">
+            <p>
+              <img class="responsive-img" src="img/graveyard.png">
+              <input class="" name="icons" type="radio" id="death" value="img/graveyard.png" />
+              <label for="death">Death</label>
+            </p>
+          </div>
+
+          <!--Red-cross icon -->
+          <div class="col s12 m4 l2 center">
+            <p>
+              <img class="responsive-img" src="img/red-cross.png">
+              <input class="" name="icons" type="radio" id="medical" value="img/red-cross.png" />
+              <label for="medical">Medical</label>
+            </p>
+          </div>
+
+          <!--Tsunami icon -->
+          <div class="col s12 m4 l2 center">
+            <p>
+              <img class="responsive-img" src="img/tsunami.png">
+              <input class="" name="icons" type="radio" id="tsunami" value="img/tsunami.png" />
+              <label for="tsunami">Tsunami</label>
+            </p>
+          </div>
+
+          <!--Avalanche icon -->
+          <div class="col s12 m4 l2 center">
+            <p>
+              <img class="responsive-img" src="img/avalanche.png">
+              <input class="" name="icons" type="radio" id="avalanche" value="img/avalanche.png" />
+              <label for="avalanche">Avalanche</label>
+            </p>
+          </div>
+
+          <!--Construction icon -->
+          <div class="col s12 m4 l2 center">
+            <p>
+              <img class="responsive-img" src="img/wrench.png">
+              <input class="" name="icons" type="radio" id="construction" value="img/wrench.png" />
+              <label for="construction">Construction</label>
+            </p>
+          </div>
+
+          <!--Landslide icon -->
+          <div class="col s12 m4 l2 center">
+            <p>
+              <img class="responsive-img" src="img/landslide.png">
+              <input class="" name="icons" type="radio" id="landslide" value="img/landslide.png" />
+              <label for="landslide">Landslide</label>
+            </p>
+          </div>
+
+          <!--Accident icon -->
+          <div class="col s12 m4 l2 center">
+            <p>
+              <img class="responsive-img" src="img/accident.png">
+              <input class="" name="icons" type="radio" id="accident" value="img/accident.png" />
+              <label for="accident">Accident</label>
+            </p>
+          </div>
+
+        </div>
+    </div>
+
+    <div class="modal-footer">
+      <div class="center">
+        <a class="save" id="save">Save Marker </a>
+      </div>
+    </div>
+    </form>
+  </div> <!--End of Modal structure-->
+
+
+
+
+  <!--Icon Credits -->
+  <div class="center">Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik,</a> <a href="https://www.flaticon.com/authors/maxim-basinski" title="Maxim Basinski">Maxim Basinski,</a> and <a href="https://www.flaticon.com/authors/pongsakornred"
+      title="pongsakornRed">pongsakornRed</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0
+      BY</a></div>
+  <br>
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-database.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!--Database config variable for Firebase -->
+  <script type="text/javascript" src="js/db_config.js"></script>
+  <!--Google maps customized style -->
+  <script type="text/javascript" src="js/map_style.js"></script>
+  <!--Marker on Google Maps JavaScript file -->
+  <script type="text/javascript" src="js/maps.js"></script>
+  <!--Google maps with API key -->
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAj38dSlzHA8UE9NKbMRTY5A5r_NWJY3qI&callback=initMap">
+  </script>
+
 </body>
+
 </html>
