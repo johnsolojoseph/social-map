@@ -13,9 +13,9 @@ firebase.ref().on("child_added", function(snapshot) {
 function createCards(title, description, bitmoji) {
   if(description && title){
   var card =""
-  card = "<div class='card-panel teal'><span class='white-text'>"+ title + "<br>" + description + " </span>   "
+  card = "<div class='card-panel card-list'><span class='white-text'>"+ title + "<br>" + description + " </span>   "
   if(bitmoji){
-  card += "<div class='center'><img src=" + "\"" + bitmoji + "\"" + "/></div> </div>"
+  card += "<div class='center'><img class='responsive-img' src=" + "\"" + bitmoji + "\"" + "/></div> </div>"
 } else {
   card += "</div>"
 }
