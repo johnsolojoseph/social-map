@@ -99,7 +99,7 @@ function initMap() {
     document.getElementById('title').value = "";
     document.getElementById('description').value = "";
     $('input[name=icons]').attr('checked', false);
-    document.getElementById("bitmoji-img").style.display = "block";
+    document.getElementById("bitmoji-img").style.display = "none";
     document.getElementById("bitmoji").innerHTML = "";
 
   });
@@ -183,15 +183,17 @@ function initMap() {
       newContent = "<h6>Description:</h6> <p>" + props.val().description + "</p>";
     }
 
+    if(props.val().bitmoji) {
+      newContent += "<div class='center'><img src=" + "\"" + props.val().bitmoji + "\"" + "/></div>"
+    }
+
     if(props.val().sentiment >= 3) {
       newContent += "<br><div class='center'><div class='chip positive'>Positive </div></div><br>";
     } else if (props.val().sentiment <= -3) {
       newContent += "<br><div class='center'><div class='chip negative'>Negative </div></div><br>";
     }
 
-    if(props.val().bitmoji) {
-      newContent += "<img src=" + "\"" + props.val().bitmoji + "\"" + "/>"
-    }
+
 
       newContent += '<br> <p> ' + props.val().date + " </p> <br>";
 
