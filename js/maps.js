@@ -70,9 +70,10 @@ function initMap() {
 
     var sentiment = s.analyze(description).score;
 
+    var dt = new Date();
+    var utcDate = dt.toUTCString();
 
 
-    console.log(sentiment);
     var sentiment = (sentiment == undefined) ? 0 : sentiment ;
 
     // Add marker to Firebase db
@@ -83,7 +84,8 @@ function initMap() {
       police: "",
       solved: "",
       icon: radioValue,
-      sentiment: sentiment
+      sentiment: sentiment,
+      date: utcDate
     });
 
     //Notifies the user that a marker was succesfully added
