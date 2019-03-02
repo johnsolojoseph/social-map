@@ -17,8 +17,8 @@ function initMap() {
   var options = {
     zoom: 14,
     center: {
-      lat: 37.3022,
-      lng: 120.4830
+      lat: 37.305577,
+      lng: -120.477717
     },
     //mapStyle from map_style.js
     styles: mapStyle
