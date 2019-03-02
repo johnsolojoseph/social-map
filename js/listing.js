@@ -4,7 +4,6 @@ var firebase = firebase.database();
 
 
 firebase.ref().on("child_added", function(snapshot) {
-  console.log(snapshot.val().title);
   document.getElementById('listing').innerHTML += createCards(snapshot.val().title, snapshot.val().description, snapshot.val().bitmoji);
 });
 
