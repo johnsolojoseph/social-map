@@ -185,6 +185,8 @@ function initMap() {
       newContent += "<br><div class='center'><div class='chip negative'>Negative </div></div><br>";
     }
 
+      newContent += '<br> <p> ' + props.val().date + " </p> <br>";
+
     if(props.val().solved) {
       newContent = "<p>The problem has been solved!<p><br>";
     }
