@@ -7,7 +7,11 @@ window.snapKitInit = function () {
        var uiOptions = {
          onStickerPickCallback:
            function onStickerPickCallback(bitmojiImgURL){
-             console.log(bitmojiImgURL);
+             bitMoji = document.getElementById("bitmoji");
+             document.getElementById("bitmoji-img").innerHTML = "<div class='center'><img src=" + "\"" + bitmojiImgURL + "\"" + "/></div>";
+             document.getElementById("bitmoji-img").style.display = "block";
+             document.getElementById("bitmoji").innerHTML = bitmojiImgURL;
+
            },
          webpickerPosition: 'bottomRight',
        };

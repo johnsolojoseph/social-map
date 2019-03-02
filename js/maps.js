@@ -42,6 +42,7 @@ function initMap() {
     var title = document.getElementById('title').value;
     var description = document.getElementById('description').value;
     var userCoordinates = document.getElementById("latLng").innerText;
+    var bitmojiImgURL = document.getElementById("bitmoji").innerText;
     var mapCoord = userCoordinates.split(",", 2);
 
     //Parses the coordinate strings
@@ -85,7 +86,8 @@ function initMap() {
       solved: "",
       icon: radioValue,
       sentiment: sentiment,
-      date: utcDate
+      date: utcDate,
+      bitmoji: bitmojiImgURL
     });
 
     //Notifies the user that a marker was succesfully added
@@ -97,6 +99,8 @@ function initMap() {
     document.getElementById('title').value = "";
     document.getElementById('description').value = "";
     $('input[name=icons]').attr('checked', false);
+    document.getElementById("bitmoji-img").style.display = "block";
+    document.getElementById("bitmoji").innerHTML = "";
 
   });
 
@@ -183,6 +187,10 @@ function initMap() {
       newContent += "<br><div class='center'><div class='chip positive'>Positive </div></div><br>";
     } else if (props.val().sentiment <= -3) {
       newContent += "<br><div class='center'><div class='chip negative'>Negative </div></div><br>";
+    }
+
+    if(props.val().bitmoji) {
+      newContent += "<img src=" + "\"" + props.val().bitmoji + "\"" + "/>"
     }
 
       newContent += '<br> <p> ' + props.val().date + " </p> <br>";
