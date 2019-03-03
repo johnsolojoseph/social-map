@@ -108,8 +108,18 @@ function initMap() {
   //Real-time data adding
   firebase.ref().on("child_added", function(snapshot) {
     addMarker(snapshot);
+    console.log(snapshot);
   });
 
+
+  //test 
+  firebase.ref().on("child_added", function(snapshot) {
+    console.log(snapshot.val().title);
+    
+  });
+  
+      
+  
   //Real-time delete
   firebase.ref().on("child_removed", function(snapshot) {
     var deletedKey = snapshot.key;
