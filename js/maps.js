@@ -80,7 +80,6 @@ function initMap() {
       police: "",
       solved: "",
       icon: radioValue,
-      sentiment: sentiment,
       date: utcDate,
       bitmoji: bitmojiImgURL
     });
@@ -183,11 +182,7 @@ function initMap() {
       newContent += "<div class='center'><img src=" + "\"" + props.val().bitmoji + "\"" + "/></div>"
     }
 
-    if(props.val().sentiment >= 3) {
-      newContent += "<br><div class='center'><div class='chip positive'>Positive </div></div><br>";
-    } else if (props.val().sentiment <= -3) {
-      newContent += "<br><div class='center'><div class='chip negative'>Negative </div></div><br>";
-    }
+  
 
 
 
