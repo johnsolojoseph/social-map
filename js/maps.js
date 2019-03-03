@@ -67,15 +67,10 @@ function initMap() {
     //Closes the modal once the user is done
     $('#add').modal('close');
 
-    var s = new Sentimood();
-
-    var sentiment = s.analyze(description).score;
 
     var dt = new Date();
     var utcDate = dt.toUTCString();
 
-
-    var sentiment = (sentiment == undefined) ? 0 : sentiment ;
 
     // Add marker to Firebase db
     firebase.ref('/').push().set({
@@ -173,7 +168,7 @@ function initMap() {
 
     //Set default content for infoWindow
     var newContent = "<p>There seems to be a problem...<p>";
-  
+
     //Checks to see if the user inputted anything for the infoWindow
     if (props.val().title && props.val().description) {
       newContent = "<div class='center'><h4>" + props.val().title + "</h4></div> <h6>Description:</h6> <p>" + props.val().description + "</p>";
