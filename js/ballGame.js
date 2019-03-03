@@ -4,7 +4,7 @@ var c = canvas.getContext("2d");
 var tx = window.innerWidth;
 var ty = window.innerHeight;
 canvas.width = tx - 10;
-canvas.height = ty * 2;
+canvas.height = 600;
 //c.lineWidth= 5;
 //c.globalAlpha = 0.5;
 
@@ -35,7 +35,7 @@ function randomColor() {
 
 function Ball() {
 
-  this.color =    //randomColor();
+  this.color = randomColor();
   this.radius = Math.random() * 20 + 14;
   this.startradius = this.radius;
   this.x = Math.random() * (tx - this.radius * 2) + this.radius;
@@ -62,7 +62,7 @@ function animate() {
     tx = window.innerWidth;
     ty = window.innerHeight;
     canvas.width = tx;
-    canvas.height = ty;
+    canvas.height = 1000;
   }
   requestAnimationFrame(animate);
   c.clearRect(0, 0, tx, ty);
@@ -101,4 +101,4 @@ animate();
 setInterval(function() {
   bal.push(new Ball());
   bal.splice(0, 1);
-}, 400);
+}, 4000);
