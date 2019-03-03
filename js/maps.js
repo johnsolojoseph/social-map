@@ -67,15 +67,10 @@ function initMap() {
     //Closes the modal once the user is done
     $('#add').modal('close');
 
-    var s = new Sentimood();
-
-    var sentiment = s.analyze(description).score;
 
     var dt = new Date();
     var utcDate = dt.toUTCString();
 
-
-    var sentiment = (sentiment == undefined) ? 0 : sentiment ;
 
     // Add marker to Firebase db
     firebase.ref('/').push().set({
@@ -85,7 +80,6 @@ function initMap() {
       police: "",
       solved: "",
       icon: radioValue,
-      sentiment: sentiment,
       date: utcDate,
       bitmoji: bitmojiImgURL
     });
@@ -149,7 +143,7 @@ function initMap() {
   });
 
   // Add Marker Function
-  function addMarker(props) {
+  async function addMarker(props) {
     var marker = new google.maps.Marker({
       position: props.val().coordinates,
       map: map,
@@ -178,11 +172,12 @@ function initMap() {
     //Path for the database ID
     var dbPath = "\"/" + props.key + "\"";
 
+
     //Info Window Content
 
     //Set default content for infoWindow
     var newContent = "<p>There seems to be a problem...<p>";
-    console.log(props.val().sentiment);
+
     //Checks to see if the user inputted anything for the infoWindow
     if (props.val().title && props.val().description) {
       newContent = "<div class='center'><h4>" + props.val().title + "</h4></div> <h6>Description:</h6> <p>" + props.val().description + "</p>";
@@ -197,11 +192,7 @@ function initMap() {
       newContent += "<div class='center'><img src=" + "\"" + props.val().bitmoji + "\"" + "/></div>"
     }
 
-    if(props.val().sentiment >= 3) {
-      newContent += "<br><div class='center'><div class='chip positive'>Positive </div></div><br>";
-    } else if (props.val().sentiment <= -3) {
-      newContent += "<br><div class='center'><div class='chip negative'>Negative </div></div><br>";
-    }
+  
 
 
 
