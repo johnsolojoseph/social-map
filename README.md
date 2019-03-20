@@ -44,10 +44,12 @@ Although our Android app is functional enough to read and write to a database, w
 We want to add more features to the web application, such as filtering posts by type and adding more options to the posts. We also want the Android application to include all of the features of the web application, including any current or planned features.
 
 ## Team Members
-![John Solo Thumbnail](https://avatars3.githubusercontent.com/u/25723690?s=460&v=4)
+![John Solo Thumbnail](https://avatars2.githubusercontent.com/u/25723690?s=88&v=4)
+<br />
 [John Solo](https://devpost.com/software/social-map)
 <br />
-![Angel Barajas Thumbnail](https://avatars2.githubusercontent.com/u/44122116?s=460&v=4)
+![Angel Barajas Thumbnail](https://avatars1.githubusercontent.com/u/44122116?s=88&v=4)
+<br />
 [Angel Barajas](https://github.com/abarajas10)
 <br />
 [Michael Hastings](https://github.com/MichaelHastings)
