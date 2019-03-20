@@ -1,7 +1,7 @@
 # social-map :computer: :earth_americas:
 Real-time crowdmapping with crowdsourced data using Firebase and Google Maps API. 
 
-Winner of Best Use of Google Cloud Platform and Best Use of a Social Media API.
+Winner of `Best Use of Google Cloud Platform` and `Best Use of a Social Media API` at HackMerced!
 <br />
 Check out [Devpost Here](https://devpost.com/software/social-map)!
 <br />
