@@ -33,7 +33,6 @@ Most of us have never collaborated with git before. We've never used Firebase, G
 Although our Android app is functional enough to read and write to a database, we did not have enough time to implement all the features for the Android app. In the beginning, we had some issues with version control, where we were overwriting each other's code with commits. This was solved as we gained a better understanding of Github commands. Some of us were not familiar with using a Firebase Database, but we grew better at is as we proceeded forward with the project.
 
 This website only works for Safari and Google Chrome for some reason.
-
 <br />
 
 ## What's next for Social Map
