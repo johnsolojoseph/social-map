@@ -13,7 +13,7 @@ Check out [Devpost Here](https://devpost.com/software/social-map)!
 <br />
 
 ## How to Use
-  1. Clone repo with `git clone https://github.com/johnsolojoseph/social-map.git` on the command terminal
+  1. Clone repo with `git clone https://github.com/johnsolojoseph/social-map.git` 
   2. Enter `npm install` in the cloned repo directory
   3. Run `npm start`
   4. Navigate to `localhost:8000` in the browser
