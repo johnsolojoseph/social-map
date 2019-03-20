@@ -13,9 +13,10 @@ Check out [Devpost Here](https://devpost.com/software/social-map)!
 <br />
 
 ## How to Use
-  1. Enter `npm install`
-  2. Run `npm start`
-  3. Navigate to `localhost:8000`
+  1. Clone repo with `git clone https://github.com/johnsolojoseph/social-map.git` on the command terminal
+  2. Enter `npm install` in the cloned repo directory
+  3. Run `npm start`
+  4. Navigate to `localhost:8000` in the browser
 
 <br />
 
@@ -44,11 +45,7 @@ We want to add more features to the web application, such as filtering posts by 
 <br />
 [Angel Barajas](https://github.com/abarajas10)
 <br />
-[![Michael Hastings Thumbnail](https://avatars1.githubusercontent.com/u/26157554?s=88&v=4)](https://github.com/MichaelHastings)
-<br />
 [Michael Hastings](https://github.com/MichaelHastings)
-<br />
-[![Jose Chavez Thumbnail](https://avatars0.githubusercontent.com/u/38239086?s=88&v=4)](https://github.com/jchav97)
 <br />
 [Jose Chavez](https://github.com/jchav97)
 
