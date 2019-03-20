@@ -8,7 +8,7 @@ Check out [Devpost Here](https://devpost.com/software/social-map)!
 <br />
 
 
-![Social Map Thumbnail](https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_thumbnail_photos/000/774/453/datas/medium.png)
+[![Social Map Thumbnail](https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_thumbnail_photos/000/774/453/datas/medium.png)](https://devpost.com/software/social-map)
 
 <br />
 
@@ -18,6 +18,7 @@ Check out [Devpost Here](https://devpost.com/software/social-map)!
   3. Navigate to `localhost:8000`
 
 <br />
+
 ## Pitch
 
 Social Maps is a crowd-driven web application and mobile app that allows users to post events, information, requests, alerts, and much more in real time to a map. Social Maps does not require a user to create an account to use, all it takes is a click, and you are able to post whatever the situation calls for. Flooding in your street? Place a marker in your location with a title, "Flood Warning" and a description of the alert to warn other Social Map users about the danger. Hosting a fundraising event? Place a marker at your location with a possible title, "Fundraising for College Funds" and a description of your service and other Social Map users can come and participate or help. Social Map provides a seamless connection for users to provide information while making it easier to access it.
@@ -44,7 +45,10 @@ We want to add more features to the web application, such as filtering posts by 
 [Angel Barajas](https://github.com/abarajas10)
 <br />
 [![Michael Hastings Thumbnail](https://avatars1.githubusercontent.com/u/26157554?s=88&v=4)](https://github.com/MichaelHastings)
+<br />
 [Michael Hastings](https://github.com/MichaelHastings)
+<br />
+[![Jose Chavez Thumbnail](https://avatars0.githubusercontent.com/u/38239086?s=88&v=4)](https://github.com/jchav97)
 <br />
 [Jose Chavez](https://github.com/jchav97)
 
