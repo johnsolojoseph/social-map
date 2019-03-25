@@ -35,6 +35,10 @@ Although our Android app is functional enough to read and write to a database, w
 This website only works for Safari and Google Chrome for some reason.
 <br />
 
+## Contributing
+
+Please raise an issue before submitting a Pull Request
+
 ## What's next for Social Map
 We want to add more features to the web application, such as filtering posts by type and adding more options to the posts. We also want the Android application to include all of the features of the web application, including any current or planned features.
 
